@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+</head>
+<body>
+    
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-accusoft"></span> <span>E-Health</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+
+                <!-- <li onClick="handleClick(event);show('DashboardSection')">
+                    <aaaaaaaaaa id="dash" href="#"  class="buttons active" > -->
+
+                <li  onClick="handleClick(event)">
+                    <a id="dashboard"  href="#"  class="buttons active " onClick="handleClick(event)" >
+                        
+                        <span class="las la-igloo"></span>
+                         <span>Dashboard</span>
+                    </a>
+                </li>
+                <li  onClick="handleClick(event)">
+                    <a id="docteur" href="#" class="buttons" onClick="handleClick(event);show('doctorsDash')" >
+                        
+                        <span class="las la-users"></span>
+                          <span>Docteurs</span>
+                    </a>
+                </li>
+                <li onClick="handleClick(event)">
+                    <a id="commentaire" href="#" class="buttons" onClick="handleClick(event);show('commentsDash')">
+                        <span class="las la-star"></span>
+                         <span>Commentaires</span>
+                    </a>
+                </li>
+               
+              
+                <li onClick="handleClick(event)">
+                    <a id="compte" href="#" class="buttons" onClick="handleClick(event);show('InfoClinique')">
+                        <span class="las la-user-circle"></span>
+                         <span>Compte</span>
+                    </a>
+                </li>
+              
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Dashboard
+                </h2>
+            </div>
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="search here">
+            </div>
+
+            <div class="user-wrapper">
+                <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                <div class="user-wrapper-info">
+                    <h4>CLINIQUE EL HOUDA</h4>
+                    <small>Avenue Abdellah el Guerssifi</small>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard" id="DashboardSection" >
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Users</span>
+                    </div>
+                    <div>
+                        <span class="las la-users">
+    
+                        </span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>70</h1>
+                        <span>Doctors</span>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/ios/50/069c54/doctor-male.png" style="color:blue;"/>                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>120</h1>
+                        <span>Clinics</span>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/carbon-copy/60/069c54/clinic.png" style="color:blue;"/>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>120</h1>
+                        <span>Pharmacies</span>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/emoji/48/000000/star-emoji.png" style="color:blue;" />                    </div>
+                </div>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Commantaires :</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Utilisateur</td>
+                                            <td>Rating</td>
+                                            <td>Commentaire</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td>Amine alaoui</td>
+                                           <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                bon service
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                il explique bien les conditions
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                pourtant prix de visite trés cher.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ayoubx</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            
+                                            <td>
+                                                il faut essayer de sourire plus
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Vos Docteurs :</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Mohamed</h4>
+                                        <small>FrontEnd Developer</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Mohamed</h4>
+                                        <small>FrontEnd Developer</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Mohamed</h4>
+                                        <small>FrontEnd Developer</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>                                
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Mohamed</h4>
+                                        <small>FrontEnd Developer</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./assets/img/plate1.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Mohamed</h4>
+                                        <small>FrontEnd Developer</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+
+        <main class="commentaire hide" id="commentsDash" >
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Commantaires :</h3>
+                            <button style="background-color:#E33A49;border:#E33A49;cursor:pointer;">Delete All  <span class="fas fa-trash"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%" >
+                                    <thead>
+                                        <tr>
+                                            <td>Utilisateur</td>
+                                            <td>Rating</td>
+                                            <td>Commentaire</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td>Amine alaoui</td>
+                                           <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                bon service
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                il explique bien les conditions
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                pourtant prix de visite trés cher.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>ayoubx</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            
+                                            <td>
+                                                il faut essayer de sourire plus
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                            
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+        <main id="doctorsDash" class="docteur hide" >
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Docteurs :</h3>
+                            <div> <button style="background-color:#27AAF0;border:#27AAF0;cursor:pointer;">Ajouter  <span class="fas fa-plus"></span></button>
+                                <button style="background-color:#E33A49;border:#E33A49;cursor:pointer;">Supprimer tous  <span class="fas fa-trash"></span></button></div>
+                           
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Docteur</td>
+                                            <td>Rating</td>
+                                            <td>Spécialité</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td>Amine alaoui</td>
+                                           <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                bon service
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                il explique bien les conditions
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>Moustafa kadimi</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                pourtant prix de visite trés cher.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>ayoubx</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            
+                                            <td>
+                                                il faut essayer de sourire plus
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>tilila</td>
+                                            <td><span>2.5 <i  style="color:#F4AC25;"  class="fas fa-star"></i></span></td> 
+                                            <td>
+                                                
+                                                les infirmières sont très sympathiques.
+                                            </td>
+                                            <td><a href="#"><span class="fas fa-user"></span></a></td>
+                                            <td><a href="#"><span class="fas fa-trash"></span></a></td>
+
+                                        </tr>
+                                            
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <!-- <main class="mainTag" id="ProfileSection" style="display: none;"> -->
+
+        <main id="InfoClinique" class="compte hide" >
+            <div class="wrapper" >
+                <div class="title">
+                  Modifier vos Information :
+                </div>
+                <div class="form">
+                   <div class="inputfield">
+                      <label>Nom de la Clinique :</label>
+                      <input type="text" class="input">
+                   </div>  
+                   <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="text" class="input">
+                 </div> 
+                    <div class="inputfield">
+                      <label>Adresse :</label>
+                      <input type="text" class="input">
+                   </div>  
+                   <div class="inputfield">
+                      <label>Téléphone :</label>
+                      <input type="text" class="input">
+                      
+                   </div>  
+                  <div class="inputfield">
+                      <label>Description :</label>
+                      <textarea class="input" cols="30" rows="4"></textarea>
+                   </div> 
+                   <div class="inputfield">
+                    <label>Téléphone D'urgence :</label>
+                    <input type="text" class="input">
+                    
+                 </div> 
+                    <div class="inputfield">
+                      <label>Spécialité :</label>
+                      <div class="custom_select">
+                        <select>
+                          <option value="">spécialité 5</option>
+                          <option value="male">Spécialité 3</option>
+                          <option value="female">Spécialité 2</option>
+                          <option value="male">Spécialité 1</option>
+                          <option value="female">Spécialité 4</option>
+                        </select>
+                      </div>
+                   </div> 
+                  <div class="inputfield">
+                    <input type="submit" value="Enregistrer" class="btn">
+                  </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    
+    <script>
+        var btn = document.getElementsByClassName('buttons');
+        var mains = document.getElementsByTagName('main');
+
+        function handleClick(event){
+            if (event.target.parentElement.classList.contains('buttons')) {
+                for(var i=0; i<btn.length; i++){
+                    if(btn[i].classList.contains('active')){
+                        btn[i].classList.remove('active');
+                    }
+                }
+                event.target.parentElement.classList.add('active');  
+            }
+            console.log(document.querySelector("."+event.target.parentElement.id));
+            if (document.querySelector("."+event.target.parentElement.id).classList.contains('hide'))
+            {
+                console.log(document.getElementsByClassName(event.target.parentElement.id));
+                for  (var i=0 ; i<mains.length ; i++)
+                {
+                        mains[i].classList.add('hide'); 
+                }
+                document.querySelector("."+event.target.parentElement.id).classList.remove('hide');
+            }
+        }
+        
+
+        function show(param_div_id) {
+            document.getElementById('main_place').innerHTML = document.getElementById(param_div_id).innerHTML;
+        }
+        
+    </script>
+</body>
+</html>

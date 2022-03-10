@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0px;
+    padding : 0px ;
+    box-sizing: border-box;
+    /* background-color: #FFB37E; */
+}
+/*Navbar styling */
+ nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #EDF8FF;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.logo{
+    color : #24385A;
+    text-transform: uppercase;
+    letter-spacing: 5px;              
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+   justify-content: space-around;
+   width: 50%;
+}
+.nav-links div {
+    display: none;
+}
+.nav-sign{
+   width: 15%;
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links a{
+    color: #24385A;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    background-color: #24385A;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+     }
+    .nav-sign{
+        width: 18%;
+     }
+   
+}
+@media screen and (max-width:800px){
+    body {
+       /* overflow: hidden; */
+       /* overflow-x: hidden; */
+   }
+    .nav-links div {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #EDF8FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-sign{
+     display: none;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger{
+   display: block;
+  
+    }
+   
+}
+.nav-active {
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+      opacity : 0;
+      transform : translateX(50px);
+    }
+    to{
+        opacity : 1;
+        transform : translateX(0px);
+    }
+}
+.toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity : 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+} 
+/*footer styling */
+footer{
+    position: absolute;
+    bottom:0;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    background-color:#EDF8FF;
+    box-shadow: 8px 11px 15px 5px #27AAF0;
+}
+footer .container .row div h5{
+        font:20px 'Gilroy', sans-serif;
+        letter-spacing: 2px;
+        color:#24385A;
+        
+}
+footer .container .row div ul li a i:hover{
+    color:#F4AC25;
+    transition : 0.3s ease;
+}
+
+
+
